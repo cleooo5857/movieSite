@@ -1,0 +1,7 @@
+
+4일
+12/24 퍼블리싱 및 api 셋팅, 데이터 불러오는 것, 무한스크롤링 (1. react-qurey, 2. useObserve )
+12/25 프로젝트 + 배포
+------------------- toy project ------------------
+12/31 typescript
+1/1 typescript 프로젝트 (todoList) + tdd 개념 + test code
