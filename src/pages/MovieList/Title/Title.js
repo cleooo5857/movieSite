@@ -4,7 +4,7 @@ import { flexAlignCenter } from "../../../styles/common";
 function MovieListTitle () {
    return(
       <S.Wrapper>
-         sadsad
+         Movie List
          <hr />
       </S.Wrapper>
 
