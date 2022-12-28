@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import ReplaceImage from '../../assets/images/unknown.png'
+import usePopularMovieQuery from "../../queries/usePopularMovieQuery";
 import { flexCenter } from "../../styles/common";
 
 function MovieCard({movie}) {
    
    const IMAGE_URL = useRef(process.env.REACT_APP_IMAGE_URL)
    const [movieOverview, setmovieOverview] = useState('')
-
    useEffect(() => {
       if(!movie) return;
       if(movie.overview.length > 100){
@@ -15,7 +15,8 @@ function MovieCard({movie}) {
       }else{
          setmovieOverview(movieOverview)
       }
-   })
+   },[])
+
 
    return(
       <S.Wrapper>
@@ -49,6 +50,17 @@ const Poster = styled.div`
 const DescBox = styled.div`
    width: 260px;
    margin: 0 auto;
+
+   & h1 {
+      color:#fff;
+      font-size: ${({theme}) => theme.palette.fontColor};
+   }
+   & div {
+      color : yellow;
+   }
+   & p {
+      color: #999;
+   }
 `
 
 const S = {

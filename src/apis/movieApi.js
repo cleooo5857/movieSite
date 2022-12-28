@@ -5,19 +5,20 @@ const PATH = '/movie';
 
 const MovieApi = {
    getPopluarMovies({params}) {
-      return Axios.get(PATH + '/popular', params)
+      console.log(params);
+      return Axios.get(PATH + '/popular', {params})
    },
    getSerachMovies({params}) {
-      return Axios.get('/search/movie',params);
+      return Axios.get('/search/movie',{params});
    },
    getNowPlayinMovies({params}) {
-      return Axios.get(PATH + '/now_palying',params);
+      return Axios.get(PATH + '/now_palying',{params});
    },
    getUpcomingMovies({params}) {
-      return Axios.get(PATH + '/upcoming',params);
+      return Axios.get(PATH + '/upcoming',{params});
    },
    getTopRatedMovies({params}) {
-      return Axios.get(PATH + 'top_rated',params)
+      return Axios.get(PATH + 'top_rated',{params})
    },
 }
 
